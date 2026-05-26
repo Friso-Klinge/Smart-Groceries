@@ -1,74 +1,60 @@
-# 🛒 Smart Groceries / Smart Boodschappenlijstje
+# ☕ Smart Groceries API (Spring Boot)
 
-Dit project bestaat uit:
-
-* 🟦 Laravel frontend
-* ☕ Spring Boot API
-* 🐳 Docker setup (alles draait via containers)
+Dit is de backend API voor het Smart Groceries project.
+De API is gebouwd met **Spring Boot (Java 21)** en kan zowel lokaal als via Docker worden uitgevoerd.
 
 ---
 
 # 📦 Benodigdheden
 
-Zorg dat je het volgende hebt geïnstalleerd:
+Om de API lokaal te draaien heb je nodig:
 
-* Docker Desktop
-  https://www.docker.com/products/docker-desktop/
+* Java 21 (JDK)
+* Maven (of Maven Wrapper `mvnw`)
+* Docker (optioneel, voor container run)
 * Git
 
-👉 Verder hoef je **NIETS lokaal te installeren**:
-
-* geen Java
-* geen Maven
-* geen PHP
-* geen Laravel setup
-
-Alles draait via Docker.
+👉 Aanrader: gebruik de Maven Wrapper, dan hoef je Maven niet apart te installeren.
 
 ---
 
-# 🚀 Project starten
+# 🚀 API lokaal starten (zonder Docker)
 
-## 1. Repository clonen
+## 1. Ga naar de API map
 
-```bash
-git clone <JOUW-REPO-URL>
-cd Smart-Groceries
+```bash id="m1k8qp"
+cd smartboodschappenlijstje-api
 ```
 
 ---
 
-## 2. Containers starten
+## 2. Build het project
 
-Start het hele project met:
-
-```bash
-docker compose up --build
+```bash id="x8k2mq"
+.\mvnw.cmd package
 ```
-
-Dit:
-
-* bouwt de Docker images
-* start frontend + backend
-* zet het netwerk automatisch goed
 
 ---
 
-## 3. Open de applicatie
+## 3. Start de applicatie
 
-### 🟦 Frontend (Laravel)
-
-```
-http://localhost:8000
+```bash id="a1m8qp"
+.\mvnw.cmd spring-boot:run
 ```
 
-### ☕ API (Spring Boot)
+---
+
+## 🌐 API endpoints
+
+Als de applicatie draait:
+
+### API base URL
 
 ```
 http://localhost:8080
 ```
 
-### 📄 Swagger UI
+### Swagger UI
 
 ```
 http://localhost:8080/swagger-ui/index.html
@@ -76,46 +62,70 @@ http://localhost:8080/swagger-ui/index.html
 
 ---
 
-# 🧱 Project structuur
+# 🐳 API starten met Docker
 
-```
-Smart-Groceries/
-│
-├── frontend/        # Laravel app
-│   ├── Dockerfile
-│   ├── app/
-│   ├── routes/
-│
-├── api/             # Spring Boot API
-│   ├── Dockerfile
-│   ├── pom.xml
-│   ├── src/
-│
-├── docker-compose.yml
-└── README.md
+## 1. Build JAR eerst
+
+```bash id="b7n2wx"
+.\mvnw.cmd package
 ```
 
 ---
 
-# 🔧 Stoppen van het project
+## 2. Build Docker image
 
-```bash
-docker compose down
+```bash id="c9p3lx"
+docker build -t smart-api .
 ```
 
 ---
 
-# ⚠️ Belangrijke notes
+## 3. Run container
 
-### API communicatie vanuit Laravel
+```bash id="d8k2qp"
+docker run -p 8080:8080 smart-api
+```
 
-Binnen Docker gebruik je:
+---
+
+## 🌐 Docker URLs
+
+```
+http://localhost:8080
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
+# 📁 Project structuur
+
+```text id="e7m1wx"
+smartboodschappenlijstje-api/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   └── resources/
+│
+├── target/
+├── Dockerfile
+├── pom.xml
+└── mvnw / mvnw.cmd
+```
+
+---
+
+# 🔗 API communicatie (Docker setup)
+
+Wanneer je frontend in Docker draait:
+
+👉 Gebruik deze URL in frontend:
 
 ```
 http://api:8080
 ```
 
-NIET:
+❌ NIET:
 
 ```
 http://localhost:8080
@@ -123,58 +133,45 @@ http://localhost:8080
 
 ---
 
-### Als poort al in gebruik is
+# ⚠️ Veelvoorkomende problemen
 
-Pas in `docker-compose.yml` de host poorten aan:
+## ❌ No compiler is provided
 
-```yaml
-ports:
-  - "8081:8080"
-```
+👉 Je hebt geen JDK geïnstalleerd
+✔ Installeer Java 21
 
-Dan wordt Swagger:
+---
 
-```
-http://localhost:8081/swagger-ui/index.html
+## ❌ target/*.jar not found
+
+👉 Je hebt geen build gedaan
+✔ Run:
+
+```bash
+.\mvnw.cmd package
 ```
 
 ---
 
-# 🧪 Eerste keer build kan langer duren
+## ❌ Port 8080 already in use
 
-Omdat Docker:
-
-* images moet downloaden
-* Maven dependencies moet installeren
-* Laravel dependencies laadt
+👉 API draait al ergens anders
+✔ Stop IntelliJ of wijzig poort in Docker run
 
 ---
 
-# 👨‍💻 Development flow
+# 🧪 Development workflow
 
-Voor wijzigingen:
+Voor elke wijziging:
 
 ```bash
 git pull
+.\mvnw.cmd package
 docker compose up --build
 ```
 
 ---
 
-# 🧠 Samenvatting
+# 👨‍💻 Author
 
-👉 1 command start alles:
-
-```bash
-docker compose up --build
-```
-
-👉 0 lokale installaties nodig
-👉 100% reproduceerbaar project
-👉 werkt op elk systeem met Docker
-
----
-
-# 🎯 Authors
-
-Smart Groceries Project Team
+Smart Groceries Development Team

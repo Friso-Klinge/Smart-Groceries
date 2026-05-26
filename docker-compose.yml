@@ -7,7 +7,7 @@ services:
       - "8080:8080"
 
   frontend:
-    build: ./frontend
+    build: ./smartboodschappenlijstje-frontend
     container_name: smart-frontend
     ports:
       - "8000:8000"
