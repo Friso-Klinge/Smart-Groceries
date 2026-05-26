@@ -1,10 +1,15 @@
-FROM php:8.2-cli
+FROM php:8.4-cli
 
 WORKDIR /app
 
 COPY . .
 
-RUN docker-php-ext-install pdo pdo_mysql
+RUN apt-get update && apt-get install -y unzip git curl \
+    && docker-php-ext-install pdo pdo_mysql
+
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+RUN composer install
 
 EXPOSE 8000
 
