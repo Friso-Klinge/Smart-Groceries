@@ -1,58 +1,214 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Smart Groceries Frontend starten
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Deze README legt uit hoe je de frontend van het Smart Groceries-project lokaal kunt starten.
 
-## About Laravel
+## Benodigdheden
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Zorg dat je deze programma's geïnstalleerd hebt:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- PHP
+- Composer
+- Node.js
+- npm
+- Git
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Project openen
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Ga eerst naar de frontend-map van het project:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+cd smartboodschappenlijstje-frontend
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Controleer of je in de juiste map zit. In deze map moeten onder andere deze bestanden staan:
 
-## Contributing
+```text
+artisan
+composer.json
+package.json
+vite.config.js
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Eerste keer starten
 
-## Code of Conduct
+Als je het project voor de eerste keer opent, voer je deze stappen uit.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 1. PHP dependencies installeren
 
-## Security Vulnerabilities
+```bash
+composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 2. Node dependencies installeren
 
-## License
+```bash
+npm install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3. .env-bestand aanmaken
+
+Als er nog geen `.env`-bestand bestaat:
+
+```bash
+cp .env.example .env
+```
+
+Op Windows PowerShell gebruik je:
+
+```powershell
+copy .env.example .env
+```
+
+### 4. App key aanmaken
+
+```bash
+php artisan key:generate
+```
+
+### 5. Database instellen
+
+Als het project SQLite gebruikt, maak dan eerst het databasebestand aan:
+
+```powershell
+New-Item database\database.sqlite -ItemType File
+```
+
+Daarna voer je de migrations uit:
+
+```bash
+php artisan migrate
+```
+
+## Project starten
+
+Voor Laravel + Vite heb je meestal twee terminals nodig.
+
+### Terminal 1: Laravel server starten
+
+```bash
+php artisan serve
+```
+
+De website draait meestal op:
+
+```text
+http://127.0.0.1:8000
+```
+
+### Terminal 2: Vite frontend starten
+
+```bash
+npm run dev
+```
+
+Laat beide terminals open staan zolang je aan het project werkt.
+
+## Na een merge met de development branch
+
+Je hoeft niet altijd alles opnieuw te doen na een merge.
+
+Gebruik dit als standaardcontrole:
+
+```bash
+composer install
+npm install
+php artisan migrate
+php artisan optimize:clear
+```
+
+Daarna start je weer:
+
+```bash
+php artisan serve
+```
+
+En in een tweede terminal:
+
+```bash
+npm run dev
+```
+
+## Wanneer moet je welke command gebruiken?
+
+| Situatie | Command |
+| --- | --- |
+| Nieuwe PHP packages | `composer install` |
+| Nieuwe npm packages | `npm install` |
+| Nieuwe database migrations | `php artisan migrate` |
+| CSS of JavaScript werkt niet goed | `npm run dev` opnieuw starten |
+| Config of cache problemen | `php artisan optimize:clear` |
+| Alleen Blade/PHP code aangepast | Browser refreshen is meestal genoeg |
+
+## Veelvoorkomende problemen
+
+### CSS werkt niet
+
+Controleer of Vite draait:
+
+```bash
+npm run dev
+```
+
+Controleer ook of dit in je Blade-layout staat:
+
+```blade
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+```
+
+Als er ook een apart CSS-bestand is, bijvoorbeeld `auth.css`, dan kan dit zijn:
+
+```blade
+@vite(['resources/css/app.css', 'resources/css/auth.css'])
+```
+
+### Database SQLite bestaat niet
+
+Krijg je een fout zoals:
+
+```text
+Database file at path database/database.sqlite does not exist
+```
+
+Maak dan het bestand aan:
+
+```powershell
+New-Item database\database.sqlite -ItemType File
+```
+
+En voer daarna uit:
+
+```bash
+php artisan migrate
+```
+
+### Vite manifest not found
+
+Voer uit:
+
+```bash
+npm run dev
+```
+
+Of bouw de frontend eenmalig:
+
+```bash
+npm run build
+```
+
+Tijdens development is `npm run dev` meestal genoeg.
+
+## Korte startversie
+
+Als alles al geïnstalleerd is, hoef je meestal alleen dit te doen:
+
+Terminal 1:
+
+```bash
+php artisan serve
+```
+
+Terminal 2:
+
+```bash
+npm run dev
+```
