@@ -1,0 +1,15 @@
+services:
+
+  api:
+    build: ./smartboodschappenlijstje-api
+    container_name: smart-api
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./smartboodschappenlijstje-frontend
+    container_name: smart-frontend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - api
