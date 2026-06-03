@@ -1,3 +1,6 @@
+@import './navigation.css';
+@import './my-lists.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
