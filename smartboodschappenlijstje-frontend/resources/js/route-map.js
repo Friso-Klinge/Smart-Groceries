@@ -17,29 +17,33 @@ async function loadApiKey() {
     API_KEY = data.key;
 }
 
+async function fetchRouteData(stops) {
+    const coordinates = stops.map((stop) => [stop.lng, stop.lat]);
+
+    const response = await fetch(
+        'https://api.openrouteservice.org/v2/directions/driving-car/geojson',
+        {
+            method: 'POST',
+            headers: {
+                Authorization: API_KEY,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                coordinates: coordinates,
+            }),
+        }
+    );
+
+    if (!response.ok) {
+        throw new Error(`Route kon niet worden opgehaald: ${response.status}`);
+    }
+
+    return await response.json();
+}
+
 async function loadRoute(map, stops) {
     try {
-        const coordinates = stops.map((stop) => [stop.lng, stop.lat]);
-
-        const response = await fetch(
-            'https://api.openrouteservice.org/v2/directions/driving-car/geojson',
-            {
-                method: 'POST',
-                headers: {
-                    Authorization: API_KEY,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    coordinates: coordinates,
-                }),
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error(`Route kon niet worden opgehaald: ${response.status}`);
-        }
-
-        const data = await response.json();
+        const data = await fetchRouteData(stops);
 
         const distanceInMeters = data.features[0].properties.summary.distance;
         const durationInSeconds = data.features[0].properties.summary.duration;
@@ -62,6 +66,33 @@ async function loadRoute(map, stops) {
     }
 }
 
+async function getSegmentDistance(from, to) {
+    const data = await fetchRouteData([from, to]);
+
+    const distanceInMeters = data.features[0].properties.summary.distance;
+    const distanceInKm = distanceInMeters / 1000;
+
+    return distanceInKm;
+}
+
+async function updateSegmentDistances(stops) {
+    const distanceElements = [
+        'distance-start-lidl',
+        'distance-lidl-aldi',
+        'distance-aldi-jumbo',
+        'distance-jumbo-home',
+    ];
+
+    for (let i = 0; i < stops.length - 1; i++) {
+        const element = document.getElementById(distanceElements[i]);
+
+        if (element) {
+            const distance = await getSegmentDistance(stops[i], stops[i + 1]);
+            element.textContent = `≈ ${distance.toFixed(1)} km`;
+        }
+    }
+}
+
 function addMarkers(map, stops) {
     stops.forEach((stop) => {
         L.marker([stop.lat, stop.lng])
@@ -76,10 +107,13 @@ async function createRouteWithStartLocation(map, supermarketStops, startLocation
     const stops = [
         startLocation,
         ...supermarketStops,
+        startLocation,
     ];
 
     addMarkers(map, stops);
-    loadRoute(map, stops);
+
+    await loadRoute(map, stops);
+    await updateSegmentDistances(stops);
 }
 
 if (mapElement) {
@@ -116,7 +150,7 @@ if (mapElement) {
                 lng: position.coords.longitude,
             };
 
-            createRouteWithStartLocation(map, supermarketStops, userLocation);
+            await createRouteWithStartLocation(map, supermarketStops, userLocation);
         },
         async (error) => {
             console.error('Locatie kon niet worden opgehaald:', error);
@@ -127,7 +161,7 @@ if (mapElement) {
                 lng: 6.7400,
             };
 
-            createRouteWithStartLocation(map, supermarketStops, fallbackStart);
+            await createRouteWithStartLocation(map, supermarketStops, fallbackStart);
         }
     );
 }

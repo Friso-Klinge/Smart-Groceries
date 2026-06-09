@@ -23,7 +23,8 @@
     font-weight: 700;
 }
 
-.route-header p {
+.route-header p,
+.muted {
     color: #6b7280;
     margin-top: 0.25rem;
 }
@@ -59,78 +60,158 @@
 }
 
 .route-card h2 {
-    margin-bottom: 1rem;
     font-size: 1.1rem;
+    font-weight: 700;
 }
 
-.fake-map {
-    position: relative;
-    height: 350px;
-    background: #f3f4f6;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.map-point {
-    position: absolute;
-    background: #22c55e;
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-}
-
-.start {
-    top: 40px;
-    left: 50px;
-}
-
-.lidl {
-    top: 120px;
-    left: 180px;
-}
-
-.aldi {
-    top: 180px;
-    left: 300px;
-}
-
-.jumbo {
-    top: 260px;
-    left: 200px;
-}
-
-.route-list {
-    list-style: none;
-    padding: 0;
-}
-
-.route-list li {
+.route-overview-title {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
 }
 
-.route-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: #22c55e;
-    margin-top: 5px;
-    flex-shrink: 0;
+.route-overview-title span {
+    color: #22c55e;
+    font-size: 1.2rem;
 }
 
-.start-dot {
+.route-timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.route-step {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: flex-start;
+}
+
+.route-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.route-icon-dark {
     background: #111827;
+    color: white;
 }
 
-.end-dot {
-    background: #3b82f6;
+.route-icon-lidl {
+    background: #fff1f1;
+    color: #dc2626;
+    border: 3px solid #ef4444;
+}
+
+.route-icon-aldi {
+    background: #eef2ff;
+    color: #2563eb;
+    border: 3px solid #3b82f6;
+}
+
+.route-icon-jumbo {
+    background: #fff7ed;
+    color: #f59e0b;
+    border: 3px solid #f59e0b;
+}
+
+.route-icon-end {
+    background: #ecfdf5;
+    color: #22c55e;
+    border: 3px solid #22c55e;
+}
+
+.route-step-card {
+    position: relative;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 1rem 1.25rem;
+    background: white;
+}
+
+.route-step-card.muted-card {
+    background: #f6f7f9;
+    border-color: transparent;
+}
+
+.route-step-card span {
+    display: block;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.route-step-card strong {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 1rem;
+}
+
+.route-subtotal {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    text-align: right;
+}
+
+.route-subtotal span {
+    text-transform: none;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.route-subtotal strong {
+    font-size: 1rem;
+}
+
+.route-products {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.route-products span {
+    background: #f3f4f6;
+    color: #111827;
+    text-transform: none;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+}
+
+.route-distance {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    align-items: center;
+    padding: 0.35rem 0;
+}
+
+.route-line {
+    width: 3px;
+    height: 24px;
+    background: #86efac;
+    margin-left: 20px;
+}
+
+.route-distance span {
+    color: #6b7280;
+    font-size: 0.85rem;
 }
 
 .summary-row {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -155,10 +236,6 @@
     color: #166534;
 }
 
-.muted {
-    color: #6b7280;
-}
-
 @media (max-width: 900px) {
     .route-grid {
         grid-template-columns: 1fr;
@@ -168,5 +245,11 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    .route-subtotal {
+        position: static;
+        text-align: left;
+        margin-top: 0.75rem;
     }
 }

@@ -14,7 +14,6 @@
         </div>
 
         <section class="route-grid">
-
             <div class="route-left">
 
                 <div class="route-card map-preview">
@@ -23,55 +22,116 @@
                 </div>
 
                 <div class="route-card">
-                    <h2>Route overzicht</h2>
+                    <div class="route-overview-title">
+                        <span>⌁</span>
+                        <h2>Route overzicht</h2>
+                    </div>
 
-                    <ol class="route-list">
-                        <li>
-                            <span class="route-dot start-dot"></span>
-                            <div>
+                    <div class="route-timeline">
+
+                        <div class="route-step">
+                            <div class="route-icon route-icon-dark">⌖</div>
+                            <div class="route-step-card muted-card">
+                                <span>Thuis</span>
                                 <strong>Start - Jouw locatie</strong>
-                                <p>Thuis</p>
                             </div>
-                        </li>
+                        </div>
 
-                        <li>
-                            <span class="route-dot"></span>
-                            <div>
-                                <strong>Stop 1 - Lidl</strong>
-                                <p>Melk, brood, eieren</p>
+                        <div class="route-distance">
+                            <div class="route-line"></div>
+                            <span id="distance-start-lidl">Afstand wordt berekend...</span>
+                        </div>
+
+                        <div class="route-step">
+                            <div class="route-icon route-icon-lidl">LI</div>
+                            <div class="route-step-card">
+                                <div>
+                                    <span>Stop 1</span>
+                                    <strong>Lidl</strong>
+                                </div>
+
+                                <div class="route-subtotal">
+                                    <span>Subtotaal</span>
+                                    <strong>€ 1,79</strong>
+                                </div>
+
+                                <div class="route-products">
+                                    <span>🥛 Melk</span>
+                                    <span>🍞 Brood</span>
+                                    <span>🥚 Eieren</span>
+                                </div>
                             </div>
-                        </li>
+                        </div>
 
-                        <li>
-                            <span class="route-dot"></span>
-                            <div>
-                                <strong>Stop 2 - Aldi</strong>
-                                <p>Pasta, kaas</p>
+                        <div class="route-distance">
+                            <div class="route-line"></div>
+                            <span id="distance-lidl-aldi">Afstand wordt berekend...</span>
+                        </div>
+
+                        <div class="route-step">
+                            <div class="route-icon route-icon-aldi">AL</div>
+                            <div class="route-step-card">
+                                <div>
+                                    <span>Stop 2</span>
+                                    <strong>Aldi</strong>
+                                </div>
+
+                                <div class="route-subtotal">
+                                    <span>Subtotaal</span>
+                                    <strong>€ 3,48</strong>
+                                </div>
+
+                                <div class="route-products">
+                                    <span>🍝 Pasta</span>
+                                    <span>🧀 Kaas</span>
+                                </div>
                             </div>
-                        </li>
+                        </div>
 
-                        <li>
-                            <span class="route-dot"></span>
-                            <div>
-                                <strong>Stop 3 - Jumbo</strong>
-                                <p>Fruit, drinken</p>
+                        <div class="route-distance">
+                            <div class="route-line"></div>
+                            <span id="distance-aldi-jumbo">Afstand wordt berekend...</span>
+                        </div>
+
+                        <div class="route-step">
+                            <div class="route-icon route-icon-jumbo">JU</div>
+                            <div class="route-step-card">
+                                <div>
+                                    <span>Stop 3</span>
+                                    <strong>Jumbo</strong>
+                                </div>
+
+                                <div class="route-subtotal">
+                                    <span>Subtotaal</span>
+                                    <strong>€ 4,25</strong>
+                                </div>
+
+                                <div class="route-products">
+                                    <span>🍎 Fruit</span>
+                                    <span>🥤 Drinken</span>
+                                </div>
                             </div>
-                        </li>
+                        </div>
 
-                        <li>
-                            <span class="route-dot end-dot"></span>
-                            <div>
+                        <div class="route-distance">
+                            <div class="route-line"></div>
+                            <span id="distance-jumbo-home">Afstand wordt berekend...</span>
+                        </div>
+
+                        <div class="route-step">
+                            <div class="route-icon route-icon-end">⌖</div>
+                            <div class="route-step-card muted-card">
+                                <span>Einde van route</span>
                                 <strong>Terug naar huis</strong>
-                                <p>Einde van de route</p>
                             </div>
-                        </li>
-                    </ol>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
 
             <aside class="route-right">
-
                 <div class="route-card">
                     <h2>Samenvatting</h2>
 
@@ -103,9 +163,7 @@
                         Deze functie wordt later toegevoegd met een API.
                     </p>
                 </div>
-
             </aside>
-
         </section>
 
     </main>
