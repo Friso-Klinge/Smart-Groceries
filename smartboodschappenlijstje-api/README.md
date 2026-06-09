@@ -175,3 +175,7 @@ docker compose up --build
 # 👨‍💻 Author
 
 Smart Groceries Development Team
+
+# API Keys
+
+Brandstof key: 65a84cfb-0183-4874-84c5-33bace5e2b96
