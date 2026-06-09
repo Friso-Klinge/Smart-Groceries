@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="" />
+    <list default="true" id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/SmartboodschappenlijstjeApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/SmartboodschappenlijstjeApiApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -31,13 +45,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Check.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.SmartboodschappenlijstjeApiApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "initial-api-setup",
+    "git-widget-placeholder": "User-Database",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/School/Smart-Groceries/smartboodschappenlijstje-api",
@@ -48,6 +63,26 @@
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.smartboodschappenlijstje.smartboodschappenlijstje_api.Check" />
+      <module name="smartboodschappenlijstje-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.smartboodschappenlijstje.smartboodschappenlijstje_api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Check" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="" />
