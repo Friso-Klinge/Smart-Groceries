@@ -24,7 +24,7 @@ public class FuelController
             @RequestParam double longitude)
     {
         return tankerKoenigService
-                .findStations(latitude, longitude, 10)
+                .findStations(latitude, longitude, 25)
                 .getStations()
                 .stream()
                 .map(this::mapToDto)
