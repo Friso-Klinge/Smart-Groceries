@@ -1,0 +1,172 @@
+#route-map {
+    height: 420px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.route-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.route-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.route-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.route-header p {
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.gas-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.route-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.route-left,
+.route-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.route-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.route-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.fake-map {
+    position: relative;
+    height: 350px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-point {
+    position: absolute;
+    background: #22c55e;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+
+.start {
+    top: 40px;
+    left: 50px;
+}
+
+.lidl {
+    top: 120px;
+    left: 180px;
+}
+
+.aldi {
+    top: 180px;
+    left: 300px;
+}
+
+.jumbo {
+    top: 260px;
+    left: 200px;
+}
+
+.route-list {
+    list-style: none;
+    padding: 0;
+}
+
+.route-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.route-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #22c55e;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.start-dot {
+    background: #111827;
+}
+
+.end-dot {
+    background: #3b82f6;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.route-saving-card {
+    background: #dcfce7;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.route-saving-card span {
+    font-size: 0.9rem;
+    color: #166534;
+}
+
+.route-saving-card strong {
+    display: block;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.route-saving-card p {
+    color: #166534;
+}
+
+.muted {
+    color: #6b7280;
+}
+
+@media (max-width: 900px) {
+    .route-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .route-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
