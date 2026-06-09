@@ -10,7 +10,7 @@ import java.sql.*;
 @SpringBootApplication
 public class SmartboodschappenlijstjeApiApplication
 {
-	public Connection sqlConnection = createConnection();
+	public static UserController userC = new UserController();
 
 	public static void main(String[] args)
 	{
@@ -36,19 +36,5 @@ public class SmartboodschappenlijstjeApiApplication
 		}).start();
 	}
 
-	public Connection createConnection()
-	{
-		Connection connection;
 
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/Smart_Groceries", "groceries_user", "groceries_password"
-			);
-		} catch (ClassNotFoundException | SQLException exeption) {
-			throw new RuntimeException(exeption);
-		}
-
-        return connection;
-	}
 }
