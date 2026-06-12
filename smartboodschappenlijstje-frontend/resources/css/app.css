@@ -1,5 +1,6 @@
 @import './navigation.css';
 @import './my-lists.css';
+@import './route.css';
 
 @tailwind base;
 @tailwind components;
