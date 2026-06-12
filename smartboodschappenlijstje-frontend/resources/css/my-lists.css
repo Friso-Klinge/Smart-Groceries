@@ -1,0 +1,91 @@
+body {
+    background: red !important;
+}
+
+.my-lists-page {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.my-lists-header {
+    margin-bottom: 40px;
+}
+
+.my-lists-header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.my-lists-header p {
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.empty-state {
+    min-height: 60vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.empty-state-icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 24px;
+
+    background: #dcfce7;
+    color: #16a34a;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    margin-bottom: 24px;
+}
+
+.empty-state h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.empty-state p {
+    margin-top: 12px;
+    margin-bottom: 24px;
+
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.new-list-button {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #16a34a;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.new-list-button:hover {
+    background: #15803d;
+}

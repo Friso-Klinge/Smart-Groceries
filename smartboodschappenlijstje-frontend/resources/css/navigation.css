@@ -1,0 +1,184 @@
+.app-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    border-bottom: 1px solid #e5e7eb;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+}
+
+.app-navbar-inner {
+    max-width: 1152px;
+    height: 72px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #111827;
+}
+
+.app-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    box-shadow: 0 10px 24px rgba(22, 163, 74, 0.25);
+}
+
+.app-brand-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.app-brand-subtitle {
+    margin-top: 2px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.app-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.app-nav-link {
+    padding: 9px 14px;
+    border-radius: 999px;
+
+    color: #6b7280;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.app-nav-link:hover {
+    background: #f3f4f6;
+    color: #111827;
+}
+
+.app-nav-link.active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.app-user-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 999px;
+
+    background: #dcfce7;
+    color: #15803d;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.app-user-menu {
+    position: relative;
+}
+
+.app-user-menu details {
+    position: relative;
+}
+
+.app-user-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+}
+
+.app-user-button::-webkit-details-marker {
+    display: none;
+}
+
+.app-dropdown {
+    position: absolute;
+    right: 0;
+    top: 52px;
+
+    width: 230px;
+    padding: 8px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    background: white;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.app-dropdown-user {
+    padding: 10px 12px;
+}
+
+.app-dropdown-user p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.app-dropdown-user span {
+    display: block;
+    margin-top: 3px;
+
+    max-width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.app-dropdown hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 6px 0;
+}
+
+.app-dropdown-link {
+    display: block;
+    width: 100%;
+
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #374151;
+
+    text-align: left;
+    text-decoration: none;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.app-dropdown-link:hover {
+    background: #f3f4f6;
+}
+
+.app-dropdown-danger {
+    color: #dc2626;
+}
