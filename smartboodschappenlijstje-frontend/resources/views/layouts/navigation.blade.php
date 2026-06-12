@@ -31,7 +31,7 @@
                 Results
             </a>
 
-            <a href="#" class="app-nav-link">
+            <a href="{{ route('route') }}" class="app-nav-link {{ request()->routeIs('route') ? 'active' : '' }}">
                 Route
             </a>
         </nav>
