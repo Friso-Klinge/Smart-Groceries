@@ -7,7 +7,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/auth.css',
-                'resources/dashboard.css',
+                'resources/css/dashboard.css',
                 'resources/css/my-lists.css',
                 'resources/css/navigation.css',
                 'resources/js/app.js',
