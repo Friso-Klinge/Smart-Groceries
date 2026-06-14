@@ -24,6 +24,7 @@ public class UserController {
                 return user;
             }
         }
+
         return null;
     }
 
@@ -47,11 +48,13 @@ public class UserController {
     @DeleteMapping("/users/{id}")
     public String deleteUser(@PathVariable int id) {
         users.removeIf(user -> user.getId() == id);
+
         try {
-            createConnection().createStatement().execute("delete from `User` where id = " + id);
+            createConnection().createStatement().execute("DELETE FROM `users` WHERE id = " + id);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
         return "User removed";
     }
 
@@ -60,7 +63,12 @@ public class UserController {
         Connection sql = createConnection();
 
         try {
-            sql.createStatement().execute("INSERT INTO User (`username`, `email`, `password`) VALUES ('" + user.getUsername() + "', '" + user.getEmail() + "', '" + user.getPassword() + "')");
+            sql.createStatement().execute(
+                    "INSERT INTO `users` (`name`, `email`, `password`) VALUES ('"
+                            + user.getUsername() + "', '"
+                            + user.getEmail() + "', '"
+                            + user.getPassword() + "')"
+            );
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -76,16 +84,18 @@ public class UserController {
         }
 
         try {
-            ResultSet resultSet = sql.createStatement().executeQuery("select * from `User`");
+            ResultSet resultSet = sql.createStatement().executeQuery("SELECT * FROM `users`");
+
             while (resultSet.next())
             {
-                if (!takenIDs.contains(resultSet.getInt(1)))
-                users.add(new User(
-                        resultSet.getInt(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getString(4)
-                ));
+                if (!takenIDs.contains(resultSet.getInt("id"))) {
+                    users.add(new User(
+                            resultSet.getInt("id"),
+                            resultSet.getString("name"),
+                            resultSet.getString("email"),
+                            resultSet.getString("password")
+                    ));
+                }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -99,10 +109,12 @@ public class UserController {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/Smart_Groceries", "groceries_user", "groceries_password"
+                    "jdbc:mysql://db:3306/smart_groceries",
+                    "groceries_user",
+                    "groceries_password"
             );
-        } catch (ClassNotFoundException | SQLException exeption) {
-            throw new RuntimeException(exeption);
+        } catch (ClassNotFoundException | SQLException exception) {
+            throw new RuntimeException(exception);
         }
 
         return connection;
