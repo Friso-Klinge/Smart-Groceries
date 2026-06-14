@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/controller/ProductPriceController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/controller/SupermarketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/database/ProductDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/database/ProductPriceDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/database/SupermarketDatabase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/model/ProductPrice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/model/Supermarket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/smartboodschappenlijstje/smartboodschappenlijstje_api/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/smartboodschappenlijstje/smartboodschappenlijstje_api/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/smartboodschappenlijstje-api-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/smartboodschappenlijstje-api-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/smartboodschappenlijstje-api-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/smartboodschappenlijstje-api-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-    </list>
+    <list default="true" id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,9 +104,22 @@
       <updated>1779354281587</updated>
       <workItem from="1780986803942" duration="1948000" />
     </task>
+    <task id="LOCAL-00001" summary="Meerdere endpoints toegevoegd, zodat we zowel de producten als de prijzen kunnen ophalen.">
+      <option name="closed" value="true" />
+      <created>1781461082056</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781461082056</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Meerdere endpoints toegevoegd, zodat we zowel de producten als de prijzen kunnen ophalen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Meerdere endpoints toegevoegd, zodat we zowel de producten als de prijzen kunnen ophalen." />
   </component>
 </project>
