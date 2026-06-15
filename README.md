@@ -29,7 +29,7 @@ Dit is de makkelijkste manier om het volledige project te starten.
 ## 1. Clone de repository
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:Friso-Klinge/Smart-Groceries.git
 ```
 
 Ga daarna naar de projectmap:
