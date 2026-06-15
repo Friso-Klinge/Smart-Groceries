@@ -4,25 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="" />
+    <list default="true" id="ddf1d997-5b87-497b-bc06-0aef346768d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/FuelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/FuelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/FuelStationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/FuelStationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/TankerKoenigResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/TankerKoenigResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/TankerKoenigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/TankerKoenigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/TankerKoenigStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/Fuel/TankerKoenigStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/SmartboodschappenlijstjeApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/SmartboodschappenlijstjeApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smartboodschappenlijstje/smartboodschappenlijstje_api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/smartboodschappenlijstje/smartboodschappenlijstje_api/UserController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="IS-89" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -33,8 +31,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Friso-Klinge/Smart-Groceries.git&quot;,
-    &quot;accountId&quot;: &quot;72918c5d-6640-4c75-b45d-bf19328431f1&quot;
+    &quot;url&quot;: &quot;git@github.com:Friso-Klinge/Smart-Groceries.git&quot;,
+    &quot;accountId&quot;: &quot;05d08819-3603-4366-b644-4f46200f7e8c&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -45,40 +43,37 @@
     </option>
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7,
-  &quot;fromUser&quot;: false
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="3E1m7OvmenmylmdPWq68H6Z5ows" />
+  <component name="ProjectId" id="3F20I2VcLkuMJgEVx4pnWGsWvx2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Check.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.SmartboodschappenlijstjeApiApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "IS-41",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/School/Smart-Groceries/smartboodschappenlijstje-api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.SmartboodschappenlijstjeApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SmartboodschappenlijstjeApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Suppermarket-requests&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JAVA&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="SmartboodschappenlijstjeApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+    <configuration name="SmartboodschappenlijstjeApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.smartboodschappenlijstje.smartboodschappenlijstje_api.SmartboodschappenlijstjeApiApplication" />
       <module name="smartboodschappenlijstje-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.smartboodschappenlijstje.smartboodschappenlijstje_api.SmartboodschappenlijstjeApiApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.smartboodschappenlijstje.smartboodschappenlijstje_api.*" />
@@ -91,35 +86,32 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SmartboodschappenlijstjeApiApplication" />
+        <item itemvalue="Application.SmartboodschappenlijstjeApiApplication" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33813.25" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33813.25" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="424d0bb1-0aad-403b-8d72-897a25ad7d44" name="Changes" comment="" />
-      <created>1779354281587</created>
+      <changelist id="ddf1d997-5b87-497b-bc06-0aef346768d2" name="Changes" comment="" />
+      <created>1781257775609</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1779354281587</updated>
-      <workItem from="1780986803942" duration="1948000" />
+      <updated>1781257775609</updated>
+      <workItem from="1781257778053" duration="60000" />
+      <workItem from="1781257866232" duration="186000" />
+      <workItem from="1781514915663" duration="499000" />
     </task>
-    <task id="LOCAL-00001" summary="Meerdere endpoints toegevoegd, zodat we zowel de producten als de prijzen kunnen ophalen.">
-      <option name="closed" value="true" />
-      <created>1781461082056</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1781461082056</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Meerdere endpoints toegevoegd, zodat we zowel de producten als de prijzen kunnen ophalen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Meerdere endpoints toegevoegd, zodat we zowel de producten als de prijzen kunnen ophalen." />
   </component>
 </project>
