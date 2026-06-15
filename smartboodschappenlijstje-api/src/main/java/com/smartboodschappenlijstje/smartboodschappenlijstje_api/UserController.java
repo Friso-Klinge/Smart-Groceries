@@ -109,7 +109,7 @@ public class UserController {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://db:3306/smart_groceries",
+                    "jdbc:mysql://localhost:3306/smart_groceries",
                     "groceries_user",
                     "groceries_password"
             );
