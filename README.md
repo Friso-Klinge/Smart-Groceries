@@ -114,7 +114,7 @@ Voor testen en demonstraties kan het volgende account gebruikt worden:
 
 ```text
 E-mail: demo@smartgroceries.nl
-Wachtwoord: password
+Wachtwoord: password123
 ```
 
 Als het testaccount nog niet bestaat, voer dan de database seeder uit:

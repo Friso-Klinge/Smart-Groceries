@@ -27,7 +27,7 @@
                 My lists
             </a>
 
-            <a href="#" class="app-nav-link">
+            <a href="{{ route('results') }}" class="app-nav-link {{ request()->routeIs('results') ? 'active' : '' }}">
                 Results
             </a>
 

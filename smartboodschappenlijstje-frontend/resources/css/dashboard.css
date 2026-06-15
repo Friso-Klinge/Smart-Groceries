@@ -60,6 +60,22 @@ body {
     outline: none;
 }
 
+.status-message,
+.error-message {
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.error-message {
+    border-color: #fca5a5;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
 .category-tabs {
     display: flex;
     gap: 8px;
@@ -86,7 +102,7 @@ body {
     margin-bottom: 22px;
 }
 
-.section-title .icon {
+.section-icon {
     width: 34px;
     height: 34px;
     background: #35c955;
@@ -132,6 +148,19 @@ body {
     font-size: 48px;
 }
 
+.deal-image img,
+.product-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.deal-image span {
+    color: #166534;
+    font-size: 30px;
+    font-weight: 800;
+}
+
 .discount {
     position: absolute;
     top: 12px;
@@ -157,6 +186,12 @@ body {
     font-size: 15px;
 }
 
+.store-name {
+    margin: 0 14px 6px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
 .price {
     margin: 0 14px 14px;
     color: #16a34a;
@@ -178,6 +213,7 @@ body {
     border-radius: 50%;
     width: 28px;
     height: 28px;
+    cursor: pointer;
 }
 
 .product-section {
@@ -226,6 +262,10 @@ body {
     display: grid;
     place-items: center;
     font-size: 28px;
+    overflow: hidden;
+    color: #166534;
+    font-size: 16px;
+    font-weight: 800;
 }
 
 .product-info {
@@ -236,6 +276,12 @@ body {
     margin: 0;
     font-size: 15px;
     font-weight: 700;
+}
+
+.product-brand {
+    color: #6b7280;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
 .product-info p {
@@ -300,6 +346,7 @@ body {
     border-radius: 999px;
     font-weight: 700;
     box-shadow: 0 8px 20px rgba(53, 201, 85, 0.35);
+    text-decoration: none;
 }
 
 .view-list-button span {
@@ -320,5 +367,20 @@ body {
     .deals-grid,
     .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-bar input {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .view-list-button {
+        right: 16px;
+        bottom: 16px;
     }
 }

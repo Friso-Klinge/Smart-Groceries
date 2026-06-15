@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResultsController;
+use App\Http\Controllers\RouteController;
+use App\Http\Controllers\ShoppingListController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,17 +14,19 @@ Route::get('/', function () {
         : redirect()->route('login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/my-lists', function () {
-    return view('my-lists');
-})->middleware(['auth', 'verified'])->name('my-lists');
-
-Route::get('/route', function () {
-    return view('route');
-})->middleware(['auth', 'verified'])->name('route');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::get('/my-lists', [ShoppingListController::class, 'index'])->name('my-lists');
+    Route::post('/my-lists', [ShoppingListController::class, 'store'])->name('shopping-lists.store');
+    Route::post('/my-lists/{shoppingList}/activate', [ShoppingListController::class, 'activate'])
+        ->name('shopping-lists.activate');
+    Route::delete('/my-lists/{shoppingList}', [ShoppingListController::class, 'destroy'])
+        ->name('shopping-lists.destroy');
+    Route::get('/results', ResultsController::class)->name('results');
+    Route::get('/route', RouteController::class)->name('route');
+    Route::post('/cart/{productId}', [CartController::class, 'store'])->name('cart.store');
+    Route::delete('/cart/items/{item}', [CartController::class, 'destroy'])->name('cart.destroy');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
