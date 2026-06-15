@@ -18,23 +18,29 @@ public class SmartboodschappenlijstjeApiApplication
 	}
 
 	@EventListener(ApplicationReadyEvent.class)
-//	@Profile("dev")
 	public void openSwagger()
 	{
 		new Thread(() -> {
 			try {
-				Thread.sleep(1500); // even wachten tot alles echt klaar is
+				Thread.sleep(1500);
 
-				Runtime.getRuntime().exec(new String[]{
-						"cmd", "/c", "start",
-						"http://localhost:8080/swagger-ui/index.html"
-				});
+				String url = "http://localhost:8080/swagger-ui/index.html";
+				String os = System.getProperty("os.name").toLowerCase();
+
+				if (os.contains("win")) {
+					Runtime.getRuntime().exec(new String[]{
+							"cmd", "/c", "start", url
+					});
+				} else if (os.contains("mac")) {
+					Runtime.getRuntime().exec(new String[]{
+							"open", url
+					});
+				}
 
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}).start();
 	}
-
 
 }
