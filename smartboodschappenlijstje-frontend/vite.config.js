@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/css/dashboard.css',
                 'resources/css/my-lists.css',
                 'resources/css/navigation.css',
+                'resources/css/results.css',
                 'resources/js/app.js',
                 'resources/js/route-map.js',
             ],

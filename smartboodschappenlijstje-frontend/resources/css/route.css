@@ -1,101 +1,106 @@
 #route-map {
-    height: 420px;
     width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
+    height: 390px;
 }
 
 .route-page {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+    min-height: calc(100vh - 72px);
+    padding: 40px max(24px, calc((100vw - 1120px) / 2)) 80px;
+    background: #f3f4f6;
+    color: #111827;
 }
 
 .route-header {
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+    gap: 24px;
+    margin-bottom: 32px;
 }
 
 .route-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
 }
 
-.route-header p,
-.muted {
+.route-header p {
+    margin: 6px 0 0;
     color: #6b7280;
-    margin-top: 0.25rem;
 }
 
 .gas-toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    background: white;
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
+    gap: 9px;
     border: 1px solid #e5e7eb;
+    border-radius: 999px;
+    background: white;
+    padding: 11px 16px;
+    font-size: 13px;
 }
 
 .route-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1.55fr) minmax(280px, 1fr);
+    gap: 24px;
 }
 
 .route-left,
 .route-right {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 16px;
 }
 
 .route-card {
-    background: white;
+    overflow: hidden;
     border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 1.5rem;
+    border-radius: 8px;
+    background: white;
 }
 
-.route-card h2 {
-    font-size: 1.1rem;
-    font-weight: 700;
+.route-card:not(.map-preview) {
+    padding: 20px;
+}
+
+.map-heading {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.map-heading span,
+.route-overview-title span {
+    color: #4ade80;
 }
 
 .route-overview-title {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.route-overview-title span {
-    color: #22c55e;
-    font-size: 1.2rem;
+.route-overview-title h2,
+.route-card h2 {
+    margin: 0;
+    font-size: 15px;
 }
 
-.route-timeline {
-    display: flex;
-    flex-direction: column;
-}
-
-.route-step {
+.route-step,
+.route-distance {
     display: grid;
-    grid-template-columns: 55px 1fr;
-    align-items: flex-start;
+    grid-template-columns: 56px minmax(0, 1fr);
 }
 
 .route-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    font-weight: 700;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 800;
 }
 
 .route-icon-dark {
@@ -103,153 +108,167 @@
     color: white;
 }
 
-.route-icon-lidl {
-    background: #fff1f1;
-    color: #dc2626;
-    border: 3px solid #ef4444;
-}
-
-.route-icon-aldi {
-    background: #eef2ff;
-    color: #2563eb;
-    border: 3px solid #3b82f6;
-}
-
-.route-icon-jumbo {
-    background: #fff7ed;
-    color: #f59e0b;
-    border: 3px solid #f59e0b;
+.route-icon-store {
+    border: 2px solid #4ade80;
+    background: #dcfce7;
+    color: #166534;
 }
 
 .route-icon-end {
-    background: #ecfdf5;
-    color: #22c55e;
-    border: 3px solid #22c55e;
+    border: 2px solid #64748b;
+    color: #475569;
 }
 
 .route-step-card {
     position: relative;
     border: 1px solid #e5e7eb;
-    border-radius: 18px;
-    padding: 1rem 1.25rem;
+    border-radius: 8px;
     background: white;
+    padding: 14px 16px;
 }
 
 .route-step-card.muted-card {
-    background: #f6f7f9;
-    border-color: transparent;
+    background: #f3f4f6;
 }
 
 .route-step-card span {
     display: block;
     color: #6b7280;
+    font-size: 10px;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
 }
 
 .route-step-card strong {
     display: block;
-    margin-top: 0.15rem;
-    font-size: 1rem;
+    margin-top: 3px;
+    font-size: 14px;
 }
 
 .route-subtotal {
     position: absolute;
-    top: 1rem;
-    right: 1.25rem;
+    top: 14px;
+    right: 16px;
     text-align: right;
 }
 
-.route-subtotal span {
-    text-transform: none;
-    font-size: 0.75rem;
-    font-weight: 400;
-}
-
-.route-subtotal strong {
-    font-size: 1rem;
-}
-
 .route-products {
-    margin-top: 0.75rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 6px;
+    margin-top: 12px;
+    padding-right: 100px;
 }
 
 .route-products span {
+    border-radius: 999px;
     background: #f3f4f6;
     color: #111827;
+    padding: 5px 8px;
+    font-size: 11px;
     text-transform: none;
-    font-size: 0.75rem;
-    font-weight: 400;
-    padding: 0.35rem 0.65rem;
-    border-radius: 999px;
 }
 
 .route-distance {
-    display: grid;
-    grid-template-columns: 55px 1fr;
     align-items: center;
-    padding: 0.35rem 0;
+    min-height: 38px;
 }
 
 .route-line {
-    width: 3px;
-    height: 24px;
-    background: #86efac;
-    margin-left: 20px;
+    width: 2px;
+    height: 28px;
+    margin-left: 19px;
+    background: #4ade80;
 }
 
 .route-distance span {
     color: #6b7280;
-    font-size: 0.85rem;
+    font-size: 12px;
 }
 
 .summary-row {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 18px;
+    margin-top: 18px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.summary-row strong {
+    color: #111827;
 }
 
 .route-saving-card {
+    border: 1px solid #86efac;
+    border-radius: 8px;
     background: #dcfce7;
-    border-radius: 16px;
-    padding: 1.5rem;
+    padding: 20px;
 }
 
 .route-saving-card span {
-    font-size: 0.9rem;
-    color: #166534;
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .route-saving-card strong {
     display: block;
-    font-size: 2rem;
-    margin: 0.5rem 0;
+    margin: 5px 0;
+    font-size: 28px;
 }
 
 .route-saving-card p {
+    margin: 0;
     color: #166534;
+    font-size: 13px;
+}
+
+.route-empty {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: white;
+    padding: 48px;
+    text-align: center;
+}
+
+.route-empty p {
+    margin-bottom: 28px;
+    color: #6b7280;
+}
+
+.route-empty a {
+    border-radius: 999px;
+    background: #55db70;
+    color: #07130b;
+    padding: 11px 18px;
+    text-decoration: none;
+    font-weight: 800;
 }
 
 @media (max-width: 900px) {
     .route-grid {
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 620px) {
+    .route-page {
+        padding-inline: 16px;
+    }
 
     .route-header {
-        flex-direction: column;
         align-items: flex-start;
-        gap: 1rem;
+        flex-direction: column;
     }
 
     .route-subtotal {
         position: static;
+        margin-top: 10px;
         text-align: left;
-        margin-top: 0.75rem;
+    }
+
+    .route-products {
+        padding-right: 0;
     }
 }
