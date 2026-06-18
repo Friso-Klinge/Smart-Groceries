@@ -41,6 +41,16 @@
     box-shadow: 0 10px 24px rgba(22, 163, 74, 0.25);
 }
 
+.app-logo svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .app-brand-title {
     font-size: 18px;
     font-weight: 700;
@@ -158,7 +168,9 @@
 }
 
 .app-dropdown-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 100%;
 
     padding: 10px 12px;
@@ -173,6 +185,29 @@
     font-size: 14px;
 
     cursor: pointer;
+}
+
+.app-dropdown-link svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-icon-sun {
+    display: none;
+}
+
+html.dark .theme-icon-moon {
+    display: none;
+}
+
+html.dark .theme-icon-sun {
+    display: block;
 }
 
 .app-dropdown-link:hover {
