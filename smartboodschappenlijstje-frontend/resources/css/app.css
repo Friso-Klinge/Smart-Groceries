@@ -5,3 +5,197 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+html.dark body,
+html.dark .min-h-screen,
+html.dark .dashboard-page,
+html.dark .my-lists-page,
+html.dark .results-page,
+html.dark .route-page {
+    background: #0b1218;
+    color: #f8fafc;
+}
+
+html.dark .app-navbar {
+    border-color: #25313b;
+    background: rgba(8, 16, 22, 0.94);
+}
+
+html.dark .app-brand,
+html.dark .app-dropdown-user p,
+html.dark .app-nav-link:hover,
+html.dark .dashboard-page,
+html.dark .my-lists-page,
+html.dark .results-page,
+html.dark .route-page,
+html.dark .summary-row strong,
+html.dark .route-products span {
+    color: #f8fafc;
+}
+
+html.dark .app-brand-subtitle,
+html.dark .app-nav-link,
+html.dark .app-dropdown-user span,
+html.dark .dashboard-hero p,
+html.dark .section-title p,
+html.dark .store-name,
+html.dark .price small,
+html.dark .product-brand,
+html.dark .product-info p,
+html.dark .my-lists-header p,
+html.dark .list-card p,
+html.dark .empty-state p,
+html.dark .results-header p,
+html.dark .results-stats small,
+html.dark .store-subtotal span,
+html.dark .store-card p,
+html.dark .results-empty p,
+html.dark .route-header p,
+html.dark .route-step-card span,
+html.dark .route-distance span,
+html.dark .summary-row,
+html.dark .route-empty p {
+    color: #9aabb9;
+}
+
+html.dark .app-nav-link:hover,
+html.dark .app-dropdown-link:hover {
+    background: #202b34;
+}
+
+html.dark .app-nav-link.active,
+html.dark .app-user-button {
+    background: #153f22;
+    color: #55db70;
+}
+
+html.dark .app-dropdown {
+    border-color: #2b3741;
+    background: #18222b;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+}
+
+html.dark .app-dropdown hr,
+html.dark .category-header,
+html.dark .result-item {
+    border-color: #2b3741;
+}
+
+html.dark .app-dropdown-link {
+    color: #e5edf3;
+}
+
+html.dark .app-dropdown-danger {
+    color: #ff4d5d;
+}
+
+html.dark .hero-stats span,
+html.dark .filter-bar,
+html.dark .category-tabs button,
+html.dark .deal-card,
+html.dark .placeholder-card,
+html.dark .product-row,
+html.dark .empty-category,
+html.dark .list-card,
+html.dark .empty-state,
+html.dark .results-stats article,
+html.dark .store-card,
+html.dark .results-empty,
+html.dark .gas-toggle,
+html.dark .route-card,
+html.dark .route-step-card,
+html.dark .route-empty {
+    border-color: #2a3741;
+    background: #17212a;
+    color: #f8fafc;
+    box-shadow: none;
+}
+
+html.dark .filter-bar input,
+html.dark .new-list-form input {
+    border-color: #33414c;
+    background: #0c151c;
+    color: #f8fafc;
+}
+
+html.dark .filter-bar input::placeholder,
+html.dark .new-list-form input::placeholder {
+    color: #71818e;
+}
+
+html.dark .category-tabs button {
+    background: #202a33;
+}
+
+html.dark .category-tabs .active {
+    border-color: #55db70;
+    background: #55db70;
+    color: #07130b;
+}
+
+html.dark .tag,
+html.dark .stat-icon,
+html.dark .result-product-mark,
+html.dark .route-step-card.muted-card,
+html.dark .route-products span {
+    background: #202b34;
+}
+
+html.dark .list-card.is-active {
+    border-color: #2fbd51;
+    box-shadow: 0 0 0 2px #153f22;
+}
+
+html.dark .use-list-button,
+html.dark .route-icon-dark {
+    background: #0b1218;
+    color: #f8fafc;
+}
+
+html.dark .delete-list-button,
+html.dark .small-add {
+    background: #17212a;
+}
+
+html.dark .route-cta,
+html.dark .route-saving-card {
+    border-color: #225d30;
+    background: #153f22;
+}
+
+html.dark .route-cta > div > span,
+html.dark .route-saving-card p {
+    color: #b9d9c0;
+}
+
+html.dark .status-message,
+html.dark .results-message {
+    border-color: #225d30;
+    background: #102d1a;
+    color: #86efac;
+}
+
+html.dark .error-message {
+    border-color: #7f1d1d;
+    background: #301417;
+    color: #fca5a5;
+}
+
+html.dark .leaflet-container {
+    background: #101a21;
+}
+
+@media (max-width: 700px) {
+    html.dark .app-nav {
+        border-color: #25313b;
+        background: #0d171e;
+    }
+}
